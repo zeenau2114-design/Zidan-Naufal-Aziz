@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tugas 01 - HTML Forms</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    .form-container {
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 500px;
+      margin: 20px auto;
+    }
+    h2 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .checkbox-group, .radio-group {
+      margin-top: 5px;
+    }
+    .checkbox-group label, .radio-group label {
+      font-weight: normal;
+      margin-right: 10px;
+    }
+    button {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 15px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+    hr {
+      margin: 40px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Form 1 -->
+  <div class="form-container">
+    <h2>Class Registration Form</h2>
+    <p>Please fill out the form below to register for our class</p>
+    <form>
+      <label>First Name</label>
+      <input type="text" required>
+      <label>Last Name</label>
+      <input type="text" required>
+
+      <label>Email Address</label>
+      <input type="email" required>
+      <label>Phone Number</label>
+      <input type="tel" required>
+
+      <label>Class Level</label>
+      <select required>
+        <option>Select your class level</option>
+        <option>Beginner</option>
+        <option>Intermediate</option>
+        <option>Advanced</option>
+      </select>
+
+      <p>Please choose the appropriate level for your experience</p>
+
+      <label>Class Days</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox"> Monday</label>
+        <label><input type="checkbox"> Tuesday</label>
+        <label><input type="checkbox"> Wednesday</label>
+        <label><input type="checkbox"> Thursday</label>
+        <label><input type="checkbox"> Friday</label>
+        <label><input type="checkbox"> Saturday</label>
+      </div>
+
+      <label><input type="checkbox"> I agree to the terms and conditions</label>
+
+      <button type="submit">Register Now!</button>
+    </form>
+  </div>
+
+  <hr>
+
+  <!-- Form 2 -->
+  <div class="form-container">
+    <h2>Event Registration Form</h2>
+    <form>
+      <label>First Name</label>
+      <input type="text">
+      <label>Last Name</label>
+      <input type="text">
+      <label>Email Address</label>
+      <input type="email">
+      <label>Phone Number</label>
+      <input type="tel">
+
+      <label>Country</label>
+      <select>
+        <option>Select Country</option>
+        <option>Indonesia</option>
+        <option>USA</option>
+        <option>UK</option>
+      </select>
+
+      <label>Date of Birth</label>
+      <input type="date">
+
+      <label>T-Shirt Size</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox"> Small</label>
+        <label><input type="checkbox"> Medium</label>
+        <label><input type="checkbox"> Large</label>
+        <label><input type="checkbox"> Extra Large</label>
+      </div>
+
+      <h3>Emergency Contact Information</h3>
+      <label>Emergency Contact Name</label>
+      <input type="text">
+      <label>Emergency Contact Phone Number</label>
+      <input type="tel">
+
+      <label><input type="checkbox"> I agree to the terms and conditions of this event</label>
+
+      <button type="submit">Register Now</button>
+    </form>
+  </div>
+
+  <hr>
+
+  <!-- Form 3 -->
+  <div class="form-container">
+    <h2>Membership Registration Form</h2>
+    <form>
+      <label>First Name</label>
+      <input type="text">
+      <label>Last Name</label>
+      <input type="text">
+      <label>Email Address</label>
+      <input type="email">
+      <label>Phone Number</label>
+      <input type="tel">
+
+      <label>Address Line 1</label>
+      <input type="text">
+      <label>Address Line 2</label>
+      <input type="text">
+
+      <label>Country</label>
+      <select>
+        <option>United States of America</option>
+        <option>Indonesia</option>
+      </select>
+
+      <label>Membership Type</label>
+      <div class="radio-group">
+        <label><input type="radio" name="membership"> Basic</label>
+        <label><input type="radio" name="membership"> Premium</label>
+        <label><input type="radio" name="membership"> Elite</label>
+      </div>
+
+      <label>Favorite Sports</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox"> Football</label>
+        <label><input type="checkbox"> Basketball</label>
+        <label><input type="checkbox"> Baseball</label>
+        <label><input type="checkbox"> Hockey</label>
+        <label><input type="checkbox"> Soccer</label>
+        <label><input type="checkbox"> Other</label>
+      </div>
+
+      <label>Why do you want to become a member?</label>
+      <textarea rows="3"></textarea>
+
+      <label><input type="checkbox"> I agree to the terms and conditions.</label>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+  </div>
+
+  <hr>
+
+  <!-- Form 4 -->
+  <div class="form-container">
+    <h2>Volunteer Sign Up Form</h2>
+    <form>
+      <label>First Name</label>
+      <input type="text">
+      <label>Last Name</label>
+      <input type="text">
+      <label>Email</label>
+      <input type="email">
+      <label>Phone Number</label>
+      <input type="tel">
+      <label>Date of Birth</label>
+      <input type="date">
+
+      <label>Preferred Volunteer Role</label>
+      <select>
+        <option>Select your preferred volunteer role</option>
+        <option>Teacher</option>
+        <option>Helper</option>
+        <option>Organizer</option>
+      </select>
+
+      <h3>Availability</h3>
+      <div class="checkbox-group">
+        <label><input type="checkbox"> Monday</label>
+        <label><input type="checkbox"> Tuesday</label>
+        <label><input type="checkbox"> Wednesday</label>
+        <label><input type="checkbox"> Thursday</label>
+        <label><input type="checkbox"> Friday</label>
+        <label><input type="checkbox"> Saturday</label>
+        <label><input type="checkbox"> Sunday</label>
+      </div>
+
+      <label>Available Start Time</label>
+      <input type="time">
+      <label>Available End Time</label>
+      <input type="time">
+
+      <h3>Skills and Interests</h3>
+      <label>Skills and Experience</label>
+      <textarea rows="3"></textarea>
+
+      <label>Interests</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox"> Animals</label>
+        <label><input type="checkbox"> Children</label>
+        <label><input type="checkbox"> Elderly</label>
+        <label><input type="checkbox"> Environment</label>
+        <label><input type="checkbox"> Health</label>
+        <label><input type="checkbox"> Homelessness</label>
+        <label><input type="checkbox"> Poverty</label>
+      </div>
+
+      <label><input type="checkbox"> I agree to the terms and conditions of the volunteer program</label>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <hr>
+
+  <!-- Form 5 -->
+  <div class="form-container">
+    <h2>Order Form</h2>
+    <form>
+      <label>Name</label>
+      <input type="text">
+      <label>Email</label>
+      <input type="email">
+      <label>Phone</label>
+      <input type="tel">
+
+      <h3>Order Details</h3>
+      <label>Product</label>
+      <select>
+        <option>Select a product</option>
+        <option>Product 1</option>
+        <option>Product 2</option>
+      </select>
+
+      <label>Quantity</label>
+      <input type="number" min="1" value="1">
+
+      <label>Size</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox"> Small</label>
+        <label><input type="checkbox"> Medium</label>
+        <label><input type="checkbox"> Large</label>
+        <label><input type="checkbox"> XL</label>
+      </div>
+
+      <label>Color</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox"> Red</label>
+        <label><input type="checkbox"> Blue</label>
+        <label><input type="checkbox"> Green</label>
+        <label><input type="checkbox"> Black</label>
+      </div>
+
+      <label>Additional Comments</label>
+      <textarea rows="3"></textarea>
+
+      <h3>Payment Details</h3>
+      <label>Payment Method</label>
+      <select>
+        <option>Select a payment method</option>
+        <option>Credit Card</option>
+        <option>PayPal</option>
+        <option>Bank Transfer</option>
+      </select>
+
+      <label><input type="checkbox"> I accept the terms and conditions.</label>
+
+      <button type="submit">Submit Order</button>
+    </form>
+  </div>
+
+</body>
+</html>
